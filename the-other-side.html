@@ -1,0 +1,293 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Other Side ✦</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #e7e5ff;
+            background:
+                radial-gradient(ellipse at 50% 0%, #29234f 0%, transparent 60%),
+                linear-gradient(145deg, #080c1b, #111329 55%, #19112c);
+            font-family: "Segoe UI", sans-serif;
+        }
+
+        .secret-room {
+            width: min(100%, 650px);
+            padding: 36px 24px;
+            text-align: center;
+            border: 1px solid rgba(191, 172, 255, 0.25);
+            border-radius: 18px;
+            background: rgba(13, 17, 38, 0.78);
+            box-shadow: 0 0 60px rgba(115, 80, 220, 0.12);
+        }
+
+        .symbol {
+            color: #c9b4ff;
+            font-size: 48px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .eyebrow {
+            margin-top: 20px;
+            color: #a99ad9;
+            font-size: 11px;
+            letter-spacing: 4px;
+        }
+
+        h1 {
+            margin: 16px 0;
+            font-size: clamp(32px, 8vw, 54px);
+            letter-spacing: 2px;
+        }
+
+        .description {
+            color: #aeb6d3;
+            line-height: 1.8;
+        }
+
+        .mystery-button {
+            margin-top: 22px;
+            padding: 13px 22px;
+            color: #17142b;
+            background: linear-gradient(135deg, #e4d9ff, #b6caff);
+            border: 0;
+            border-radius: 9px;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .mystery-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 24px rgba(185, 165, 255, 0.3);
+        }
+
+        #message {
+            min-height: 54px;
+            margin: 24px 0 8px;
+            color: #dfd2ff;
+            line-height: 1.7;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 28px;
+            color: #9eacd0;
+            font-size: 12px;
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            color: #e0d5ff;
+        }
+
+        /* THE PERSONAL NOTE ✧ */
+
+        .personal-note {
+            width: min(100%, 650px);
+            margin: 24px 0 0;
+            padding: 24px;
+            text-align: center;
+            color: #d5d9f0;
+            background: rgba(153, 131, 211, 0.07);
+            border: 1px solid rgba(191, 172, 255, 0.2);
+            border-radius: 12px;
+            font-size: 13px;
+            line-height: 1.9;
+            box-shadow: 0 0 35px rgba(115, 80, 220, 0.06);
+        }
+
+        .personal-note p {
+            margin: 0 0 14px;
+        }
+
+        .personal-note .note-heading {
+            margin-bottom: 22px;
+            color: #c9b4ff;
+            font-size: 10px;
+            letter-spacing: 2px;
+        }
+
+        .personal-note .note-signature {
+            margin-top: 24px;
+            margin-bottom: 5px;
+            color: #e0d2ff;
+        }
+
+        .personal-note .note-date {
+            margin: 0;
+            color: #8290b5;
+            font-size: 10px;
+        }
+
+        .footer {
+            margin-top: 28px;
+            color: #667394;
+            font-size: 10px;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 24px 14px;
+            }
+
+            .secret-room {
+                padding: 28px 18px;
+            }
+
+            .personal-note {
+                padding: 20px 16px;
+            }
+        }
+        
+/* ✧ Secret page links ✧ */
+.personal-note a {
+    color: #c9b4ff;
+    text-decoration: none;
+    border-bottom: 1px dashed rgba(201, 180, 255, 0.5);
+    transition: color 0.2s, text-shadow 0.2s;
+}
+
+.personal-note a:hover {
+    color: #f0e5ff;
+    text-shadow: 0 0 10px rgba(201, 180, 255, 0.65);
+    border-bottom-color: #f0e5ff;
+}
+
+.personal-note a:visited {
+    color: #d5a9ef;
+}
+
+    </style>
+</head>
+
+<body>
+
+    <!-- THE SECRET ROOM -->
+
+    <main class="secret-room">
+        <div class="symbol">✦</div>
+
+        <p class="eyebrow">UNKNOWN LOCATION · 001</p>
+
+        <h1>The Other Side</h1>
+
+        <p class="description">
+            You found a place that probably shouldn't exist.<br>
+            There is no explanation. Enjoy your stay.
+        </p>
+
+        <button class="mystery-button" id="mysteryButton" type="button">
+            DO SOMETHING RANDOM ✧
+        </button>
+
+        <p id="message" aria-live="polite">
+            The void is waiting for your input...
+        </p>
+
+        <a class="back-link" href="index.html">
+            ← Return to the normal world
+        </a>
+    </main>
+
+    <!-- MINAMI'S PERSONAL NOTE -->
+
+    <section class="personal-note">
+        <p class="note-heading">✧ A LITTLE NOTE FROM MINAMI ✧</p>
+
+        <p>Heyyy! :3</p>
+
+        <p>
+           Didn't really expect anyone here! 
+        </p>
+
+        <p>
+            anyway, welcome to my little corner of the internet!
+            i just thought it'd be fun to leave something behind.
+        </p>
+
+        <p>
+            I just wanna say, hope you're having a lovely day!
+        </p>
+
+        <p>
+    If you'd like to see more of my content, feel free to check out my
+    <a href="https://www.youtube.com/@Velvettteee" target="_blank" rel="noopener noreferrer">
+        YouTube channel
+    </a>!
+</p>
+
+        <p class="note-signature">— minami ✧</p>
+
+        <p class="note-date">
+            left behind on a snowy night · 2026
+        </p>
+    </section>
+
+    <footer class="footer">
+        END OF TRANSMISSION · 雪
+    </footer>
+
+    <!-- RANDOM MESSAGE BUTTON -->
+
+    <script>
+        const messages = [
+            "A mysterious penguin has acknowledged your existence. 🐧",
+            "The council of cats has postponed your trial.",
+            "Somewhere in Hokkaido, a vending machine is thinking about you.",
+            "Achievement unlocked: You clicked a button. Incredible.",
+            "The stars say: drink some water, you absolute creature.",
+            "404: Braincell not found.",
+            "A tiny snow spirit wishes you a good evening. ❄️",
+            "You have been selected for absolutely nothing. Congratulations.",
+            "There is a suspicious amount of soup in the universe.",
+            "The secret is that nobody knows what they're doing."
+        ];
+
+        const mysteryButton = document.getElementById("mysteryButton");
+        const message = document.getElementById("message");
+
+        mysteryButton.addEventListener("click", () => {
+            let nextMessage;
+
+            do {
+                nextMessage =
+                    messages[Math.floor(Math.random() * messages.length)];
+            } while (
+                messages.length > 1 &&
+                nextMessage === message.textContent
+            );
+
+            message.textContent = nextMessage;
+        });
+    </script>
+
+</body>
+</html>
